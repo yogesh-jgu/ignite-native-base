@@ -12,6 +12,7 @@ import {
 } from "../../components"
 import { color, spacing, typography } from "../../theme"
 import { NavigatorParamList } from "../../navigators"
+import { Icon, HStack, Checkbox } from "native-base";
 
 const bowserLogo = require("./bowser.png")
 
@@ -107,6 +108,10 @@ export const WelcomeScreen: FC<StackScreenProps<NavigatorParamList, "welcome">> 
             this screen and, in that case, congrats! You're ready to ship.
           </Text>
           <Text style={CONTENT}>
+          <HStack space={6}>
+      <Checkbox value="test" accessibilityLabel="This is a dummy checkbox" />
+      <Checkbox value="test" accessibilityLabel="This is a dummy checkbox" defaultIsChecked />
+    </HStack>;
             For everyone else, this is where you'll see a live preview of your fully functioning app
             using Ignite.
           </Text>
